@@ -22,6 +22,10 @@ const io = socketIo(server, {
   }
 });
 
+app.get('/', function (req, res){
+  res.send('<h1>Server running LFG :)</h1>')
+});
+
 // Middleware
 app.use(cors());
 app.use(express.json());
